@@ -1,0 +1,224 @@
+﻿@model List<ProtectAnimal.Models.works>
+@{
+    ViewBag.Title = "CatPersonArt";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>查看个人作品</title>
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../../Content/assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--引入头部时要带的样式-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Roboto-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+    <!-- Bootstrap Select-->
+    <link rel="stylesheet" href="../../vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="../../vendor/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="../../vendor/owl.carousel/assets/owl.theme.default.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../../Content/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../../Content/css/custom.css">
+    <!-- Favicon and apple touch icons-->
+    <link rel="shortcut icon" href="../../Content/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../../Content/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../Content/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../Content/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../Content/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../Content/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../Content/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../Content/img/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../Content/img/apple-touch-icon-152x152.png">
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!--引入结束-->
+    <style>
+/*自己写的css,暂时放在这*/
+        /* 多行文字隐藏 */
+        .overline1 {
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+        }
+        .setimage {
+            overflow: hidden;
+            position: relative;
+            width: 1045px;
+            height: 433px;
+            background: black;
+        }
+
+            .setimage > img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        /*top: 50%;left: 50%;， 是以左上角为原点，故不处于中心位置
+        translate(-50%,-50%) 作用是，往上（x轴）, 左（y轴）移动自身长宽的 50%，以使其居于中心位置
+        */
+        </style>
+</head>
+<body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <section id="menu">
+
+            <!-- Search -->
+            <section>
+                <form class="search" method="get" action="#">
+                    <input type="text" name="query" placeholder="Search" />
+                </form>
+            </section>
+
+            <!-- Links -->
+            <section>
+                <ul class="links">
+                    <li>
+                        <a href="#">
+                            <h3>Lorem ipsum</h3>
+                            <p>Feugiat tempus veroeros dolor</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Dolor sit amet</h3>
+                            <p>Sed vitae justo condimentum</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Feugiat veroeros</h3>
+                            <p>Phasellus sed ultricies mi congue</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Etiam sed consequat</h3>
+                            <p>Porta lectus amet ultricies</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Actions -->
+            <section>
+                <ul class="actions vertical">
+                    <li><a href="#" class="button big fit">Log In</a></li>
+                </ul>
+            </section>
+
+        </section>
+
+        <!-- Main -->
+        <div id="main">
+
+
+
+            <!-- Post -->
+            <!--
+
+     <article class="post">
+         <header>
+             <div class="title">
+                 <h2><a href="#">Magna sed adipiscing</a></h2>
+                 <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+             </div>
+             <div class="meta">
+                 <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                 <a href="#" class="author"><span class="name">Jane Doe</span><img src="../../Content/images/avatar.jpg" alt="" /></a>
+             </div>
+         </header>
+         <a href="#" class="image featured"><img src="../../Content/images/pic01.jpg" alt="" /></a>
+         <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+         <footer>
+             <ul class="actions">
+                 <li><a href="#" class="button big">Continue Reading</a></li>
+                 <li><a href="#" class="button big">Delete</a></li>
+             </ul>
+         </footer>
+     </article>
+    -->
+            <p id="pp"> 全部作品如下</p>
+
+            @foreach (var w in Model)
+    {
+        <!-- Post -->
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2><a href="#">@w.Title</a></h2>
+                    <p>@w.CoreSentence</p>
+                </div>
+                <div class="meta">
+                    <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                    <a href="#" class="author"><span class="name">@w.author</span><img src="../../Content/images/avatar.jpg" alt="" /></a>
+                </div>
+            </header>
+            <div class="setimage">
+                <a href="#" class="image featured"><img src=@w.Image alt="" /></a><br />
+            </div>
+            <br />
+            <p class="overline1">@Html.Raw(@w.Context)</p>
+            <footer>
+                <ul class="actions">
+                    <li>@Html.ActionLink("阅读更多", "ShowDetail", new { wid = w.Wid }, new { @class = "button big" })</li>
+                    <li>@Html.ActionLink("删除作品", "DeleteArticle", new { wid = w.Wid }, new { @class = "button big" })</li>
+                </ul>
+                <ul class="stats">
+                    <li><a href="#">General</a></li>
+                    <li><a href="#" class="icon fa-heart">28</a></li>
+                    <li><a href="#" class="icon fa-comment">128</a></li>
+                </ul>
+            </footer>
+        </article>
+}
+
+            <!-- Sidebar -->
+
+        </div>
+   </div>
+        <!-- Scripts -->
+        <script src="../../Content/assets/js/jquery.min.js"></script>
+        <script src="../../Content/assets/js/skel.min.js"></script>
+        <script src="../../Content/assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="../../Content/assets/js/main.js"></script>
+        @section scripts{
+            <script>
+        var s="@Session["USER"]";
+        if(s=="")//解决报错问题
+        {
+            alert("你还未登录，请先登录！");
+            window.location.href = "/Home/Login";
+         }
+            </script>
+
+            <script>
+                if (@Model.Count == 0)
+                     document.getElementById("pp").innerHTML = "你还没有发布作品哦~";
+            </script>
+        }
+
+</body>
+</html>

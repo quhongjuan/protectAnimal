@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+   
+</head>
+<body>
+    <!-- Top bar-->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-6 d-md-block d-none">
+                    <p>Contact us on 187047692555 or 3092603759@qq.com.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-md-end justify-content-between">
+                        <ul class="list-inline contact-info d-block d-md-none">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-phone"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                        <div id="islogin">
+                            <div class="login">
+                                <a href="/Home/Login" class="login-btn">
+                                    <i class="fa fa-sign-in"></i>
+                                    <span class="d-none d-md-inline-block">Sign In</span>
+                                </a>
+                                <a href="/Home/Register2" class="signup-btn">
+                                    <i class="fa fa-user"></i>
+                                    <span class="d-none d-md-inline-block">Sign Up</span>
+                                </a>
+                            </div>
+                        </div>
+                       
+                        <script>
+           var s="@Session["USER"]";
+        if(s!="")//已经登录
+        {
+            document.getElementById("islogin").innerHTML = "已登录";
+            //document.write(name.toString());
+         }
+                        </script>
+                        <ul class="social-custom list-inline">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top bar end-->
+   
+    <!-- Navbar Start-->
+    <header class="nav-holder make-sticky">
+        <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="#" class="navbar-brand home"><img src="../../Content/img/logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="../../Content/img/logo-small.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
+                <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
+                <div id="navigation" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown active">
+                            <a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">首页 <b class="caret"></b></a>
+                            <ul class="dropdown-menu megamenu">
+                                <li class="nav-item"><a href="/Home/Index" class="nav-link">返回首页</a></li>
+                            </ul>
+                        </li>
+                      
+
+                        <li class="nav-item dropdown menu-large">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">文章分类<b class="caret"></b></a>
+                            <ul class="dropdown-menu megamenu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-lg-6"><img src="../../Content/img/template-easy-customize.jpg" alt="" class="img-fluid d-none d-lg-block"></div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <h5>地域划分区</h5>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="nav-item"><a href="/Article/ShowContext/0" class="nav-link">亚欧非洲</a></li>
+                                                <li class="nav-item"><a href="/Article/ShowContext/1" class="nav-link">南北美洲</a></li>
+                                                <li class="nav-item"><a href="/Article/ShowContext/2" class="nav-link">大洋洲</a></li>
+                                                <li class="nav-item"><a href="/Article/ShowContext/3" class="nav-link">南极洲北冰洋</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <h5>文章类型区</h5>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="nav-item"><a href="/Article/ShowContext/4" class="nav-link">公益海报类</a></li>
+                                                <li class="nav-item"><a href="/Article/ShowContext/5" class="nav-link">号召宣传类</a></li>
+                                                <li class="nav-item"><a href="/Article/ShowContext/6" class="nav-link">心得日志类</a></li>
+                                                <li class="nav-item"><a href="/Article/ShowContext/7" class="nav-link">其他类</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">发表作品<b class="caret"></b></a>
+                            <ul class="dropdown-menu megamenu">
+                                <li class="nav-item"><a href="/Article/PublishArticle" class="nav-link">发表文章</a></li>
+                            </ul>
+                        </li>
+                        <!-- ========== FULL WIDTH MEGAMENU ==================-->
+                        <li class="nav-item dropdown ">
+                            <a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">公益组织<b class="caret"></b></a>
+                            <ul class="dropdown-menu megamenu">
+                                <li class="nav-item"><a href="/Team/CatTeam" class="nav-link">热门组织</a></li>
+                                <li class="nav-item"><a href="/Team/RegisterTeam" class="nav-link">登记组织</a></li>
+                            </ul>
+                        </li>
+                        <!-- ========== FULL WIDTH MEGAMENU END ==================-->
+                        <!-- ========== Contact dropdown ==================-->
+                        <li class="nav-item dropdown">
+                            <a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">个人中心<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="/Article/CatPersonArt" class="nav-link">全部文章</a></li>
+                                <li class="dropdown-item"><a href="/Home/Change" class="nav-link">修改密码</a></li>
+                                <li class="dropdown-item"><a href="/Home/Contact" class="nav-link">联系我们</a></li>
+                                <li class="dropdown-item"><a href="/Home/Exit" class="nav-link">退出登录</a></li>
+                            </ul>
+                        </li>
+                        <!-- ========== Contact dropdown end ==================-->
+                    </ul>
+                </div>
+                <div id="search" class="collapse clearfix">
+                    <form role="search" class="navbar-form">
+                        <div class="input-group">
+                            <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar End-->
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year  create by 曲洪娟</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/vendor/jquery/jquery.min.js")
+    @Scripts.Render("~/vendor/popper.js/umd/popper.min.js")
+    @Scripts.Render("~/vendor/bootstrap/js/bootstrap.min.js")
+    @Scripts.Render("~/vendor/jquery.cookie/jquery.cookie.js")
+    @Scripts.Render("~/vendor/waypoints/lib/jquery.waypoints.min.js")
+    @Scripts.Render("~/vendor/jquery.counterup/jquery.counterup.min.js")
+    @Scripts.Render("~/vendor/owl.carousel/owl.carousel.min.js")
+    @Scripts.Render("~/vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js")
+    @Scripts.Render("~/Scripts/js/jquery.parallax-1.1.3.js")
+    @Scripts.Render("~/vendor/bootstrap-select/js/bootstrap-select.min.js")
+    @Scripts.Render("~/vendor/jquery.scrollto/jquery.scrollTo.min.js")
+    @Scripts.Render("~/Scripts/js/front.js")
+
+    @*
+         @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+    *@
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
