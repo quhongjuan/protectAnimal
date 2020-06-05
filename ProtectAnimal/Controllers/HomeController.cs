@@ -15,13 +15,20 @@ namespace ProtectAnimal.Controllers
             return View();
         }
 
-
+        [HttpGet]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+        [HttpPost]
+        public ActionResult Contact(string name,string email,string message)
+        {
+            ViewBag.Message = "Your contact page.";
+            Response.Write("<script>alert('您的意见已经提交，我们会虚心采纳您的意见，请继续浏览网站吧！');window.location.href='Index';</script>");
+            return null;
+            //  return Redirect("/Home/contactSubmit");
+        }
+       
         [HttpGet]
         public ActionResult Register2()
         {
@@ -42,7 +49,7 @@ namespace ProtectAnimal.Controllers
                     ajaxResult.Result = DoResult.Success;
                     ajaxResult.PromptMsg = "注册成功";
                     //修改到登录
-                    return RedirectToAction("index");
+                    return RedirectToAction("Login");
                 }
                 else
                 {
@@ -55,7 +62,7 @@ namespace ProtectAnimal.Controllers
                 ajaxResult.Result = DoResult.Failed;
                 ajaxResult.PromptMsg = "输入错误：未填全或者格式错误";
             }
-            return Json(ajaxResult);
+            return Redirect("Login");
         }
 
         [HttpGet]

@@ -14,7 +14,6 @@
     <!--引入头部时要带的样式-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Universal - All In 1 Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -85,28 +84,28 @@
         <div id="main">
 
             @foreach (var w in Model)
-            {
-        
-                <article class="post">
-                <header>
-                    <div class="title">
+    {
+
+        <article class="post">
+            <header>
+                <div class="title">
                     <h2><a href="#">@w.Title</a></h2>
                     <p>@w.CoreSentence</p>
-                    </div>
-                    <div class="meta">
-                        <time class="published" datetime="2015-11-01">November 1, 2015</time>
-                        <a href="#" class="author"><img src="../../Content/images/avatar.jpg" alt="" /></a>
-                        <span>@Html.ActionLink(@w.author, "CatAuthorArt", new { uid = w.Uid })</span>
-                    </div>
-                </header>
-                <div class="setimage">
-                    <a href="#" class="image featured"><img src=@w.Image alt="" /></a>
                 </div>
-                <br />
-                <p class="overline1">@Html.Raw(@w.Context)</p>
+                <div class="meta">
+                    <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                    <a href="#" class="author"><img src="../../Content/images/avatar.jpg" alt="" /></a>
+                    <span>@Html.ActionLink(@w.author, "CatAuthorArt", new { uid = w.Uid })</span>
+                </div>
+            </header>
+            <div class="setimage">
+                <a href="#" class="image featured"><img src=@w.Image alt="" /></a>
+            </div>
+            <br />
+            <p class="overline1">@Html.Raw(@w.Context)</p>
             <footer>
                 <ul class="actions">
-                    <li>@Html.ActionLink("阅读更多", "ShowDetail", new { wid = w.Wid },new{ @class="button big"})</li>
+                    <li>@Html.ActionLink("阅读更多", "ShowDetail", new { wid = w.Wid }, new { @class = "button big" })</li>
                 </ul>
                 <ul class="stats">
                     <li><a href="#">General</a></li>
@@ -114,46 +113,48 @@
                     <li><a href="#" class="icon fa-comment">128</a></li>
                 </ul>
             </footer>
-             </article>
-             
-   }
+        </article>
+
+}
 
 
             <!-- Post -->
             <!--
-            <article class="post">
-                <header>
-                    <div class="title">
-                        <h2><a href="#">给你一个理由：保护濒危野生动物</a></h2>
-                        <p>劝君莫打枝头鸟，子在巢中望母归。</p>
-                    </div>
-                    <div class="meta">
-                        <time class="published" datetime="2015-10-25">October 25, 2015</time>
-                        <a href="#" class="author"><span class="name">Jane Doe</span><img src="../../Content/images/avatar.jpg" alt="" /></a>
-                    </div>
-                </header>
-                <a href="#" class="image featured"><img src="../../Content/images/pic02.jpg" alt="" /></a><br />
-                <p class="overline1">有人说，是为了保持生物的多样性。可是，为什么要保持生物的多样性？为什么多样就是好，不多样就是不好呢？你怎么知道一个国家有十万种鸟就是好，有十万零一种鸟就是不好？这个是没有道理的。也许让那种不适应生存的该死的鸟灭绝了，让其他十万种更有生存能力的鸟有更大的生存空间，这样更加好，不是吗？<br>告诉你，每年有多少种新的物种产生。那么一个物种灭绝了，是不是给其他新物种的产生创造了条件呢？那是肯定的。所以保护濒危野生动物，不一定会保护生物多样性，还有可能破坏生物的多样性。<br>我在第一段说了，生物多样性是不值得追求的目标。那么第二段的意思是，就算是为了生物的多样性，也不应该保护现有的濒危野生动物。<br>生态就不平衡呢？也许会更加平衡呢？很多人把生态平衡理解成一个僵死的过程，以为生态平衡就是维持现状。这是错的。生态平衡是一个动态的过程，它总是从一种平衡转向另一种平衡。有些动物很容易灭绝，这说明现在的状态是不稳定的平衡。那么它灭绝了，不稳定的平衡就会转向稳定的平衡，这才是生态平衡的应有之义吧？<br>第四点，有人说保护生物多样性，保护生态平衡，都是为了保护人类自己。好，涉及到人类，那就要涉及到方法论的问题了。为什么？因为涉及人类的科学叫社会科学，它的方法与自然科学的方法不同。在正确的社会科学中，有一条这样的原则，那就是：目的的正确性，不能论证手段的正当性。就是说，即使保护生物多样性，保护生态平衡，这些目标是正确的，那么使用国家法律强迫，也就是侵犯财产权的方式，也是不正当的。<br>现有的保护濒危动物的国家法律，为了保护动物而侵犯人的身体和财产，这显然就是孟子说的“帅兽而食人”了。为了保护别的生物而伤害人类，这样的人是人类的敌人。为什么呢？因为所有的伦理道德法律，都是人与人之间的原则。我们人类作为一个物种，内部的关系肯定要高于我们与其他物种之间的关系。那么为了保护别的生物而惩罚人类，就是把人放在畜牲之下，造成人不如狗，人不如猪了。<br>我呼吁停止这种把人放在畜牲之下的暴行。</p>
-                <footer>
-                    <ul class="actions">
-                        <li><a href="/Article/ShowDetail" class="button big">Continue Reading</a></li>
-                    </ul>
-                    <ul class="stats">
-                        <li><a href="#">General</a></li>
-                        <li><a href="#" class="icon fa-heart">28</a></li>
-                        <li><a href="#" class="icon fa-comment">128</a></li>
-                    </ul>
-                </footer>
+     <article class="post">
+         <header>
+             <div class="title">
+                 <h2><a href="#">给你一个理由：保护濒危野生动物</a></h2>
+                 <p>劝君莫打枝头鸟，子在巢中望母归。</p>
+             </div>
+             <div class="meta">
+                 <time class="published" datetime="2015-10-25">October 25, 2015</time>
+                 <a href="#" class="author"><span class="name">Jane Doe</span><img src="../../Content/images/avatar.jpg" alt="" /></a>
+             </div>
+         </header>
+         <a href="#" class="image featured"><img src="../../Content/images/pic02.jpg" alt="" /></a><br />
+         <p class="overline1">有人说，是为了保持生物的多样性。可是，为什么要保持生物的多样性？为什么多样就是好，不多样就是不好呢？你怎么知道一个国家有十万种鸟就是好，有十万零一种鸟就是不好？这个是没有道理的。也许让那种不适应生存的该死的鸟灭绝了，让其他十万种更有生存能力的鸟有更大的生存空间，这样更加好，不是吗？<br>告诉你，每年有多少种新的物种产生。那么一个物种灭绝了，是不是给其他新物种的产生创造了条件呢？那是肯定的。所以保护濒危野生动物，不一定会保护生物多样性，还有可能破坏生物的多样性。<br>我在第一段说了，生物多样性是不值得追求的目标。那么第二段的意思是，就算是为了生物的多样性，也不应该保护现有的濒危野生动物。<br>生态就不平衡呢？也许会更加平衡呢？很多人把生态平衡理解成一个僵死的过程，以为生态平衡就是维持现状。这是错的。生态平衡是一个动态的过程，它总是从一种平衡转向另一种平衡。有些动物很容易灭绝，这说明现在的状态是不稳定的平衡。那么它灭绝了，不稳定的平衡就会转向稳定的平衡，这才是生态平衡的应有之义吧？<br>第四点，有人说保护生物多样性，保护生态平衡，都是为了保护人类自己。好，涉及到人类，那就要涉及到方法论的问题了。为什么？因为涉及人类的科学叫社会科学，它的方法与自然科学的方法不同。在正确的社会科学中，有一条这样的原则，那就是：目的的正确性，不能论证手段的正当性。就是说，即使保护生物多样性，保护生态平衡，这些目标是正确的，那么使用国家法律强迫，也就是侵犯财产权的方式，也是不正当的。<br>现有的保护濒危动物的国家法律，为了保护动物而侵犯人的身体和财产，这显然就是孟子说的“帅兽而食人”了。为了保护别的生物而伤害人类，这样的人是人类的敌人。为什么呢？因为所有的伦理道德法律，都是人与人之间的原则。我们人类作为一个物种，内部的关系肯定要高于我们与其他物种之间的关系。那么为了保护别的生物而惩罚人类，就是把人放在畜牲之下，造成人不如狗，人不如猪了。<br>我呼吁停止这种把人放在畜牲之下的暴行。</p>
+         <footer>
+             <ul class="actions">
+                 <li><a href="/Article/ShowDetail" class="button big">Continue Reading</a></li>
+             </ul>
+             <ul class="stats">
+                 <li><a href="#">General</a></li>
+                 <li><a href="#" class="icon fa-heart">28</a></li>
+                 <li><a href="#" class="icon fa-comment">128</a></li>
+             </ul>
+         </footer>
 
-            </article>
+     </article>
 
-           -->
-
+    -->
             <!-- Pagination -->
-            <ul class="actions pagination">
+            <!--
+             <ul class="actions pagination">
                 <li><a href="" class="disabled button big previous">Previous Page</a></li>
                 <li><a href="javascript:void(0)" class="button big next">Next Page</a></li>
             </ul>
+    -->
+
 
         </div>
 

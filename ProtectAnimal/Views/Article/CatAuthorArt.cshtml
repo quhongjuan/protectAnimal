@@ -155,7 +155,7 @@
                         <a href="#" class="image featured"><img src=@w.Image alt="" /></a>
                     </div>
                     <br/>
-                    <p class="overline1">@w.Context</p>
+                    <p class="overline1">@Html.Raw(@w.Context)</p>
                     <footer>
                         <ul class="actions">
                             <li>@Html.ActionLink("阅读更多", "ShowDetail", new { wid = w.Wid },new { @class="button big"})</li>
